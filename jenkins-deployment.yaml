@@ -25,5 +25,5 @@ spec:
             - name: jenkins-data
               mountPath: /var/jenkins_home
       volumes:
-        - name: jenkins-vol
+        - name: jenkins-data
           emptyDir: {}
