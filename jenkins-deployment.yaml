@@ -29,6 +29,3 @@ spec:
           nfs:
             server: 10.0.2.12
             path: /mnt/shared_directory
-      # volumes:
-      #   - name: jenkins-data
-      #     emptyDir: {}
