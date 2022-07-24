@@ -22,7 +22,7 @@ spec:
             - name: jnlpport
               containerPort: 50000
           volumeMounts:
-            - name: jenkins-data
+            - name: nfs-volume
               mountPath: /var/jenkins_home
       volumes:
         - name: nfs-volume
