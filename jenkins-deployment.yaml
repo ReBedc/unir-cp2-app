@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins
-  namespace: jenkins-nm2
+  namespace: jenkins-nm
 spec:
   replicas: 1
   selector:
@@ -25,5 +25,10 @@ spec:
             - name: jenkins-data
               mountPath: /var/jenkins_home
       volumes:
-        - name: jenkins-data
-          emptyDir: {}
+        - name: nfs-volume
+          nfs:
+            server: 20.254.43.167
+            path: /mnt/shared_directory
+      # volumes:
+      #   - name: jenkins-data
+      #     emptyDir: {}

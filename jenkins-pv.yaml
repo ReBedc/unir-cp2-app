@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv0003
-  namespace: jenkins-nm2
+  name: pv
+  namespace: jenkins-nm
 spec:
   capacity:
     storage: 5Gi
   volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
-  storageClassName: slow
+  storageClassName: nfs
   mountOptions:
     - hard
     - nfsvers=4.1
   nfs:
     path: /mnt/shared_directory
-    server: 20.254.88.182
+    server: 20.254.43.167
